@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Nova Tarefa</title>
+</head>
+<body>
+    <h1>Criar Nova Tarefa</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <div class="form-group">
+            {{ field.label_tag }}
+            {{ field }}
+            {% if field.errors %}
+            <ul class=""errorlist">
+                {% for error in field.errors %}
+                    <li style="color: red;">{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+        </div>
+        <button type="submit">Salvar</button>
+
+
+
+    </form>
+    
+</body>
+</html>

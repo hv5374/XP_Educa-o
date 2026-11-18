@@ -1,0 +1,51 @@
+# INTRODUÇÃO
+
+Redes rasas >
+- underfitting
+- poucas camadas(1 a 3 camadas)
+- resolvem problemas simples(regressão linear, classificação básica)
+- treinam mais rápido, mas podem não capturar padrões complexos
+
+redes profundas >
+- pode sofrer overfitting se não tiver dados suficientes
+- muitas camadas(mais de 5)
+- reconhecimento de imagens, tradução automática e deep learning
+
+como saber o n° ideal de camadas:
+1. Problemas simples(regressão, classificação de poucos dados) modelos rasos (1-3 camadas)
+2. Problemas complexos(reconhecimento de imagens, NLP, series temporais) modelos profundos (mais de 5 camadas)
+3. Problemas sequenciais(texto, voz, series temporais) -> uso de RNNs ou Transformers
+
+Regra geral, comece com uma rede pequena e aumente progressivamente até obter equilibrio entre precisão e generalização
+
+DEFINIÇÕES
+
+Overfitting(sobreajuste)
+- memoriza dados de treinamento mas não generaliza bem novos dados
+- Alta precisão no treino, baixa no teste
+Soluções:
+- Redução da complexidade dos modelos
+- Aumento dos dados
+- Regularização (Dropout, L2)
+
+Underfitting(Subajuste)
+- Modelo muito simples para aprender padrões complexos
+- Baixa precisão treino e teste
+- Não captura bem os padrões nos dados
+Soluções:
+- Aumentar o numero de camadas dos neuronios
+- Usar funções de ativação não linear
+
+COMPARAÇÃO DE ARQUITETURAS (MLPs, CNNs, RNNs e Transformers) - Cada arquitetura é mais adequada para cada tipo de problemas
+
+MLPs - Multilayer Perceptron
+- ideal para dados tabulares e problemas de classificação e regressão
+- tem camadas densas conectadas
+
+CNNs - Redes Convolucionais
+- Reconhecimento de imagens
+- Camadas convolucionais para padrões espaciais  
+
+Transformers
+- modernos e com visão computacional
+- melhor que RNN em texto
